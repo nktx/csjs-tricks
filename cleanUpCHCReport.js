@@ -13,6 +13,9 @@ javascript: (function() {
   var tables = document.querySelectorAll("table");
 
   for (var j = 0; j < tables.length; j++) {
+    if (tables[j].children[0].children.length === 1) {
+      tables[j].children[0].children[0].setAttribute("colspan", "39");
+    }
     if (tables[j].children[0].children.length === 3) {
       tables[j].previousSibling.previousSibling.previousSibling.previousSibling.remove();
       tables[j].remove();
